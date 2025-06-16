@@ -50,3 +50,11 @@ Thumbs.db
 
 # Angular cache
 .angular/cache
+# Angular cache
+frontend/.angular/cache/
+
+/frontend/node_modules/
+/frontend/.angular/cache/
+/backend/node_modules/
+dist/
+/frontend/dist/

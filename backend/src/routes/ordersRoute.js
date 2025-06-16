@@ -3,9 +3,6 @@ const axios = require("axios");
 const orderControllers = require("../controllers/ordersController");
 const router = express.Router();
 
-/*
-const JSON_SERVER_URL = "http://localhost:3000/orders";
-*/
 
 // Obtener todas las órdenes
 router.get("/", orderControllers.getOrders);

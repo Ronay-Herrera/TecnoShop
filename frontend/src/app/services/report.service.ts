@@ -8,7 +8,8 @@ import { Report } from '../models/report.model';
   providedIn: 'root'
 })
 export class ReportService {
-  private apiUrl = 'http://localhost:3000/Reports';
+  //private apiUrl = 'http://localhost:3000/Reports';
+  private apiUrl = 'https://tecnoshop-q249.onrender.com/Reports';
 
   constructor(private http: HttpClient) {}
 

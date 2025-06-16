@@ -7,7 +7,8 @@ import User from '../models/user.model';
 })
 export class LoginServiceService { 
 
-  POST_URL = 'http://localhost:3000/Login';
+  //POST_URL = 'http://localhost:3000/Login';
+  POST_URL = 'https://tecnoshop-q249.onrender.com/Login';
 
 
   constructor(private http: HttpClient) { }

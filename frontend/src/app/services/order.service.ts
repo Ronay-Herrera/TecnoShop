@@ -9,7 +9,8 @@ import { Product } from '../models/product.model';
   providedIn: 'root'
 })
 export class OrderService {
-  private apiUrl = 'http://localhost:3000/orders';
+  //private apiUrl = 'http://localhost:3000/orders';
+  private apiUrl = 'https://tecnoshop-q249.onrender.com/orders';
 
   constructor(private http: HttpClient) {}
 
@@ -64,7 +65,8 @@ export class OrderService {
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:3000/products';
+ // private apiUrl = 'http://localhost:3000/products';
+  private apiUrl = 'https://tecnoshop-q249.onrender.com/products';
 
   constructor(private http: HttpClient) {}
 

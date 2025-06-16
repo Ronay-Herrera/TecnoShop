@@ -8,7 +8,8 @@ import { catchError } from 'rxjs/operators';
 })
 export class CommonService {
 
-  private apiUrl = 'http://localhost:3000/';
+  //private apiUrl = 'http://localhost:3000/';
+  private apiUrl = 'https://tecnoshop-q249.onrender.com/';
 
   constructor(private http: HttpClient) { }
 

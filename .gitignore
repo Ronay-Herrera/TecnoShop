@@ -55,6 +55,7 @@ frontend/.angular/
 
 /frontend/node_modules/
 /frontend/.angular/cache/
+frontend\src\.angular
 
 /backend/node_modules/
 dist/

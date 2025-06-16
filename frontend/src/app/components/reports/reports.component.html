@@ -1,0 +1,48 @@
+<div class="report-section">
+  <h2>Reportes</h2>
+
+  <form [formGroup]="reportForm" (ngSubmit)="createReport()">
+    <div>
+      <label for="id">ID:</label>
+      <input id="id" formControlName="id" type="number" />
+    </div>
+    <div>
+      <label for="description">Descripción:</label>
+      <input id="description" formControlName="description" type="text" />
+    </div>
+    <div>
+      <label for="date">Fecha:</label>
+      <input id="date" formControlName="date" type="date" />
+    </div>
+    <button type="submit" [disabled]="reportForm.invalid">Crear Reporte</button>
+  </form>
+
+  <h3>Lista de Reportes</h3>
+  <ul>
+    <li *ngFor="let report of reports">
+      <strong>ID:</strong> {{ report.id }} |
+      <strong>Descripción:</strong> {{ report.description }} |
+      <strong>Fecha:</strong> {{ report.date }}
+      <button (click)="deleteReport(report._id)">Eliminar</button>
+    </li>
+  </ul>
+</div>
+
+<table class="reports-table">
+  <thead>
+    <tr>
+      <th>ID del Reporte</th>
+      <th>Descripción</th>
+      <th>Fecha de Generación</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let report of reports">
+      <td>{{ report.id }}</td>
+      <td>{{ report.description }}</td>
+      <td>{{ report.date }}</td>
+      <td><button class="btn">Ver</button></td>
+    </tr>
+  </tbody>
+</table>

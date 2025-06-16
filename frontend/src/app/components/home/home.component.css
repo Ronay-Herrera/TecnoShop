@@ -1,0 +1,12 @@
+button, h2 {
+    display: inline-flex;
+}
+
+button {
+    margin-left: auto;
+}
+
+h2 {
+    display: grid;
+    grid-template-columns: auto  10%;
+}

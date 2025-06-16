@@ -1,0 +1,85 @@
+<app-nav-var></app-nav-var>
+<div class="container">
+  @if(rol == 1 || rol == 2 || rol == 3) {
+  <section id="form-section" class="form-section">
+    <h2>
+      Automatización de la Entrada de Pedidos
+      <button (click)="toggleDropdown('form-section')" class="btn btn-link" data-toggle="collapse" data-target="#form-content" aria-expanded="true" aria-controls="form-content">
+        &#9660;
+      </button>
+    </h2>
+    <div *ngIf="isOpen['form-section']" class="mt-4">
+      <div id="form-content" class="collapse show">
+        <app-form-section></app-form-section>
+      </div>
+    </div>
+  </section>
+  }
+
+  @if(rol == 2 || rol == 3) {
+  <section id="inventory-section" class="inventory-section">
+    <h2>
+      Gestión Centralizada de Inventarios
+      <button (click)="toggleDropdown('inventory-section')" class="btn btn-link" data-toggle="collapse" data-target="#inventory-content" aria-expanded="true" aria-controls="inventory-content">
+        &#9660;
+      </button>
+    </h2>
+    <div *ngIf="isOpen['inventory-section']" class="mt-4">
+      <div id="inventory-content" class="collapse show">
+        <app-inventory></app-inventory>
+      </div>
+    </div>
+  </section>
+  }
+
+  @if(rol == 3) {
+  <section id="reports-section" class="reports-section">
+    <h2>
+      Generación de Reportes Automatizados
+      <button (click)="toggleDropdown('reports-section')" class="btn btn-link" data-toggle="collapse" data-target="#reports-content" aria-expanded="true" aria-controls="reports-content">
+        &#9660;
+      </button>
+    </h2>
+    <div *ngIf="isOpen['reports-section']" class="mt-4">
+      <div id="reports-content" class="collapse show">
+        <app-report></app-report>
+      </div>
+    </div>
+  </section>
+  }
+
+  @if(rol == 2 || rol == 3) {
+  <section id="notifications-section" class="notifications-section">
+    <h2>
+      Notificaciones Automáticas
+      <button (click)="toggleDropdown('notifications-section')" class="btn btn-link" data-toggle="collapse" data-target="#notifications-content" aria-expanded="true" aria-controls="notifications-content">
+        &#9660;
+      </button>
+    </h2>
+    <div *ngIf="isOpen['notifications-section']" class="mt-4">
+      <div id="notifications-content" class="collapse show">
+        <app-notifications></app-notifications>
+      </div>
+    </div>
+  </section>
+  }
+
+  @if(rol == 1 || rol == 2 || rol == 3) {
+  <section id="orders-section" class="orders-section">
+    <h2>
+      Historial de Pedidos
+      <button (click)="toggleDropdown('orders-section')" class="btn btn-link" data-toggle="collapse" data-target="#orders-content" aria-expanded="true" aria-controls="orders-content">
+        &#9660;
+      </button>
+    </h2>
+    <div *ngIf="isOpen['orders-section']" class="mt-4">
+      <div id="orders-content" class="collapse show">
+        <app-orders></app-orders>
+      </div>
+    </div>
+  </section>
+  }
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

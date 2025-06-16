@@ -1,0 +1,47 @@
+<div class="Orders">
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Fecha</th>
+        <th>Cantidad</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.firstName + " " + order.lastName}}</td>
+        <td>
+          <ul>
+            <li *ngFor="let producto of order.products">
+              {{ producto.productName }}
+            </li>
+          </ul>
+        </td>
+        <td>{{order.date}}</td>
+        <td>
+          <ul>
+            <li *ngFor="let producto of order.products">
+              {{ producto.productQuantity }}
+            </li>
+          </ul>
+        </td>
+        <td>
+          <span [ngClass]="{'status-completed': order.state === 'completado', 'status-pending': order.state === 'pendiente'}">
+            {{ order.state }}
+          </span>
+        </td>
+        <td>
+          <button class="btn btn-success" (click)="markAsDelivered(order)">Marcar como entregado</button>
+          <br>
+          <button class="btn btn-danger" (click)="cancelOrder(order)">Cancelar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,143 @@
+/* Sección principal */
+.report-section {
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo claro */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #566981;
+}
+
+/* Títulos */
+.report-section h2, .report-section h3 {
+    color: #000000; 
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form button {
+    align-self: flex-start;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form button:disabled {
+    background-color: #6c757d; /* Gris para deshabilitado */
+    cursor: not-allowed;
+}
+
+/* Lista de reportes */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li strong {
+    color: #000000;
+}
+
+ul li button {
+    background-color: #dc3545; /* Rojo para eliminar */
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+ul li button:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Tabla de reportes */
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #566981;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.reports-table th, .reports-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.reports-table th {
+    background-color: #606060; 
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.reports-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternar colores de filas */
+}
+
+.reports-table tr:hover {
+    background-color: #f1f1f1; /* Resaltar fila al pasar el mouse */
+}
+
+.reports-table td button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.reports-table td button:hover {
+    background-color: #ccc; /* Color más oscuro al pasar el mouse */
+}

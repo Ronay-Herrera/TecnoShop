@@ -1,0 +1,18 @@
+<nav>
+  @if(rol == 1 || rol == 2 || rol == 3) {
+    <a href="home/#form-section">Entrada de Pedidos</a>
+  }
+  @if(rol == 2 || rol == 3) {
+    <a href="home/#inventory-section">Inventarios</a>
+  }
+  @if(rol == 3) {
+    <a href="home/#reports-section">Reportes</a>
+  }
+  @if(rol == 2 || rol == 3) {
+    <a href="home/#notifications-section">Notificaciones</a>
+  }
+  @if(rol == 1 || rol == 2 || rol == 3) {
+    <a href="home/#orders-section">Historial</a>
+  }
+  <button (click)="logout()">Cerrar Sesión</button>
+</nav>

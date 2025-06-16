@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #3a415a;
+  }
+  nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  nav a:hover {
+    background-color: #566981;
+  }
+  button{
+    align-self: center;
+    margin-left: 10%;
+    padding: 0.8%;
+    background: #34344e;
+    color: white;
+  }
+
+  button:hover{
+    background: #566981;
+    box-shadow: 0 0 7px #566981;
+  }

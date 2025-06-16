@@ -1,0 +1,34 @@
+<div>
+  <button class="btn btn-secondary" (click)="toggleTableVisibility()">
+    {{ isTableVisible ? 'Ocultar Tabla' : 'Mostrar Tabla' }}
+  </button>
+</div>
+<br>
+<div *ngIf="isTableVisible">
+  <table class="inventory-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre del Producto</th>
+        <th>Cantidad en Inventario</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product._id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.stock }}</td>
+        <td>
+          <img class="listing-photo" [src]="product.image" alt="{{ product.name }}" aria-hidden="true">
+        </td>
+        <td>
+          <a [routerLink]="['/inventory', product._id]">Actualizar Producto</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<button class="btn btn-primary" [routerLink]="['/inventory']">Crear Nuevo Producto</button>

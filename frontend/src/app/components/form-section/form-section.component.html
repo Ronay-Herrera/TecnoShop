@@ -1,0 +1,48 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+    <div class="form-group">
+        <label for="first-name">Nombre</label>
+        <input type="text" id="first-name" formControlName="firstName" required>
+        <button type="button" (click)="startListening('firstName')" *ngIf="!isListening">🎤</button>
+        <button type="button" (click)="stopListening()" *ngIf="isListening">🛑</button>
+    </div>
+    <div class="form-group">
+        <label for="last-name">Apellido</label>
+        <input type="text" id="last-name" formControlName="lastName" required>
+        <button type="button" (click)="startListening('lastName')" *ngIf="!isListening">🎤</button>
+        <button type="button" (click)="stopListening()" *ngIf="isListening">🛑</button>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email"  required>
+    </div>
+    <div formArrayName="products">
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
+                    <td>
+                        <select id="product" formControlName="product" required title="Seleccione un producto">
+                            <option *ngFor="let product of productsList" [value]="product._id">{{ product.name }}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" id="quantity" formControlName="quantity" required title="Ingrese la cantidad" placeholder="Cantidad">
+                    </td>
+                    <td>
+                        <button type="button" (click)="removeProduct(i)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>    
+    <button type="button" (click)="addProduct()">Agregar Producto</button>
+    <br><br>
+    <button type="submit" class="btn">Enviar Pedido</button>
+</form>

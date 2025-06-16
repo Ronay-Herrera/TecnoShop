@@ -1,0 +1,3 @@
+<div *ngFor="let product of lowStockProducts" class="notification">
+  <p><strong>Alerta:</strong> El inventario del Producto {{ product._id }} ({{ product.name }}) está bajo. Quedan {{ product.stock }} unidades.</p>
+</div>

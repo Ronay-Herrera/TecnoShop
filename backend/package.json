@@ -1,0 +1,27 @@
+{
+    "name": "TecnoShop-backend",
+    "version": "1.0.0",
+    "description": "Backend for TecnoShop automation system",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js",
+        "start:json-server": "json-server --watch src/db.json --port 3001"
+    },
+    "dependencies": {
+        "@types/google.maps": "^3.58.1",
+        "axios": "^1.7.9",
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "mongoose": "^8.13.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    },
+    "author": "",
+    "license": "ISC",
+    "keywords": [],
+    "type": "commonjs"
+}

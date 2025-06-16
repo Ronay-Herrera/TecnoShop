@@ -30,8 +30,6 @@ app.use('/reports', ReportRoute);
 // Conexión a la Base de Datos
 mongoose.Promise = global.Promise;
 mongoose.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
 }).then(() => {
     console.log("Database Connected Successfully!!");    
 }).catch(err => {

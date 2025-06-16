@@ -11,6 +11,8 @@ frontend/.angular/
 frontend/cache/
 frontend/.angular/cache/
 
+.angular
+
 # VS Code settings
 .vscode/
 

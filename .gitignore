@@ -60,7 +60,4 @@ frontend/.angular/
 /backend/node_modules/
 dist/
 /frontend/dist/
-# Ignorar archivos pesados individuales de caché
-/frontend/.angular/cache/19.1.5/angular-webpack/3f8ecd4cbeed7f09af017880c90f7e35f109cf2f/7.pack
-/frontend/.angular/cache/19.1.5/angular-webpack/beb81caf70eade47a02fd887b383500a49da728a/4.pack
-/frontend/.angular/cache/19.1.5/angular-webpack/beb81caf70eade47a02fd887b383500a49da728a/12.pack
+/.vscode/

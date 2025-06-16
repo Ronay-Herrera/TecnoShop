@@ -14,7 +14,8 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-    origin: "http://localhost:4200",
+    //origin: "http://localhost:4200",
+    origin: "https://meanexample.netlify.app/",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
 })); 
